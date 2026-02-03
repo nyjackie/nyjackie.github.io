@@ -1,30 +1,179 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Official Catppuccin Theme Switcher ✨
+ * All 4 flavors: Latte, Frappé, Macchiato, Mocha
+ * Colors verified against https://catppuccin.com/palette/
  */
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+/* Catppuccin Latte (Light) */
+[data-catppuccin-theme='latte'] {
+  --ifm-color-primary: #8839ef;
+  --ifm-color-primary-dark: #7c2ee6;
+  --ifm-color-primary-darker: #7429e0;
+  --ifm-color-primary-darkest: #5f21ba;
+  --ifm-color-primary-light: #9445f2;
+  --ifm-color-primary-lighter: #9c4df4;
+  --ifm-color-primary-lightest: #b465f8;
+  --docusaurus-highlighted-code-line-bg: rgba(136, 57, 239, 0.1);
+  
+  --ifm-background-color: #eff1f5;
+  --ifm-background-surface-color: #e6e9ef;
+  --ifm-font-color-base: #4c4f69;
+  --ifm-heading-color: #dc8a78;
+  --ifm-menu-color-background-active: #e6e9ef;
+  --ifm-navbar-background-color: #dce0e8;
+  --ifm-footer-background-color: #dce0e8;
+  --ifm-card-background-color: #e6e9ef;
+  --ifm-toc-border-color: #9ca0b0;
+  --ifm-color-emphasis-300: #9ca0b0;
+  --ifm-hr-background-color: #9ca0b0;
+  --ifm-link-color: #8839ef;
+  --ifm-link-hover-color: #7c2ee6;
+  --ifm-code-background: #e6e9ef;
+  --ifm-code-color: #ea76cb;
+}
+
+/* Catppuccin Frappé */
+[data-catppuccin-theme='frappe'] {
+  --ifm-color-primary: #ca9ee6;
+  --ifm-color-primary-dark: #be8ce0;
+  --ifm-color-primary-darker: #b883dd;
+  --ifm-color-primary-darkest: #9c6dd1;
+  --ifm-color-primary-light: #d6b0ec;
+  --ifm-color-primary-lighter: #dbb9ef;
+  --ifm-color-primary-lightest: #ecd4f5;
+  --docusaurus-highlighted-code-line-bg: rgba(202, 158, 230, 0.15);
+  
+  --ifm-background-color: #303446;
+  --ifm-background-surface-color: #414559;
+  --ifm-font-color-base: #c6d0f5;
+  --ifm-heading-color: #f2d5cf;
+  --ifm-menu-color-background-active: #414559;
+  --ifm-navbar-background-color: #232634;
+  --ifm-footer-background-color: #232634;
+  --ifm-card-background-color: #414559;
+  --ifm-toc-border-color: #626880;
+  --ifm-color-emphasis-300: #626880;
+  --ifm-hr-background-color: #626880;
+  --ifm-link-color: #ca9ee6;
+  --ifm-link-hover-color: #f4b8e4;
+  --ifm-code-background: #232634;
+  --ifm-code-color: #f4b8e4;
+}
+
+/* Catppuccin Macchiato */
+[data-catppuccin-theme='macchiato'] {
+  --ifm-color-primary: #c6a0f6;
+  --ifm-color-primary-dark: #b88df0;
+  --ifm-color-primary-darker: #b084ed;
+  --ifm-color-primary-darkest: #936de1;
+  --ifm-color-primary-light: #d4b3fc;
+  --ifm-color-primary-lighter: #d9bcfd;
+  --ifm-color-primary-lightest: #e8d4fe;
+  --docusaurus-highlighted-code-line-bg: rgba(198, 160, 246, 0.15);
+  
+  --ifm-background-color: #24273a;
+  --ifm-background-surface-color: #363a4f;
+  --ifm-font-color-base: #cad3f5;
+  --ifm-heading-color: #f4dbd6;
+  --ifm-menu-color-background-active: #363a4f;
+  --ifm-navbar-background-color: #181926;
+  --ifm-footer-background-color: #181926;
+  --ifm-card-background-color: #363a4f;
+  --ifm-toc-border-color: #5b6078;
+  --ifm-color-emphasis-300: #5b6078;
+  --ifm-hr-background-color: #5b6078;
+  --ifm-link-color: #c6a0f6;
+  --ifm-link-hover-color: #f5bde6;
+  --ifm-code-background: #181926;
+  --ifm-code-color: #f5bde6;
+}
+
+/* Catppuccin Mocha */
+[data-catppuccin-theme='mocha'] {
+  --ifm-color-primary: #cba6f7;
+  --ifm-color-primary-dark: #b794f5;
+  --ifm-color-primary-darker: #ab88f4;
+  --ifm-color-primary-darkest: #8b5cf6;
+  --ifm-color-primary-light: #d3b2f9;
+  --ifm-color-primary-lighter: #dfbefa;
+  --ifm-color-primary-lightest: #f5e0fe;
+  --docusaurus-highlighted-code-line-bg: rgba(203, 166, 247, 0.15);
+  
+  --ifm-background-color: #1e1e2e;
+  --ifm-background-surface-color: #313244;
+  --ifm-font-color-base: #cdd6f4;
+  --ifm-heading-color: #f5e0dc;
+  --ifm-menu-color-background-active: #313244;
+  --ifm-navbar-background-color: #11111b;
+  --ifm-footer-background-color: #11111b;
+  --ifm-card-background-color: #313244;
+  --ifm-toc-border-color: #45475a;
+  --ifm-color-emphasis-300: #45475a;
+  --ifm-hr-background-color: #45475a;
+  --ifm-link-color: #cba6f7;
+  --ifm-link-hover-color: #f5c2e7;
+  --ifm-code-background: #11111b;
+  --ifm-code-color: #f5c2e7;
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Navbar styling */
+.navbar {
+  box-shadow: 0 1px 2px 0 rgba(var(--ifm-color-primary-rgb), 0.1);
+}
+
+/* Card hover effects */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(var(--ifm-color-primary-rgb), 0.2);
+}
+
+/* Blog post styling */
+article header h1 {
+  color: var(--ifm-color-primary);
+}
+
+/* Scrollbar styling for dark themes */
+[data-catppuccin-theme='frappe'] ::-webkit-scrollbar,
+[data-catppuccin-theme='macchiato'] ::-webkit-scrollbar,
+[data-catppuccin-theme='mocha'] ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+[data-catppuccin-theme='frappe'] ::-webkit-scrollbar-track {
+  background: #303446;
+}
+
+[data-catppuccin-theme='macchiato'] ::-webkit-scrollbar-track {
+  background: #24273a;
+}
+
+[data-catppuccin-theme='mocha'] ::-webkit-scrollbar-track {
+  background: #1e1e2e;
+}
+
+[data-catppuccin-theme='frappe'] ::-webkit-scrollbar-thumb,
+[data-catppuccin-theme='macchiato'] ::-webkit-scrollbar-thumb,
+[data-catppuccin-theme='mocha'] ::-webkit-scrollbar-thumb {
+  background: var(--ifm-toc-border-color);
+  border-radius: 5px;
+}
+
+[data-catppuccin-theme='frappe'] ::-webkit-scrollbar-thumb:hover,
+[data-catppuccin-theme='macchiato'] ::-webkit-scrollbar-thumb:hover,
+[data-catppuccin-theme='mocha'] ::-webkit-scrollbar-thumb:hover {
+  background: var(--ifm-color-emphasis-300);
 }

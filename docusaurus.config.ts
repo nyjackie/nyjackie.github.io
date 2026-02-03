@@ -42,26 +42,10 @@ const config: Config = {
         docs: {
           routeBasePath: '/docs',
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false, // Disable default blog
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -69,11 +53,46 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'devlog',
+        routeBasePath: 'devlog',
+        path: './devlog',
+        blogTitle: 'Dev Log',
+        blogDescription: 'Technical articles and development insights',
+        showReadingTime: true,
+        feedOptions: {
+          type: ['rss', 'atom'],
+          title: 'Jackie X. - Dev Log',
+        },
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'lifelog',
+        routeBasePath: 'lifelog',
+        path: './lifelog',
+        blogTitle: 'Life Log',
+        blogDescription: 'Personal thoughts and life experiences',
+        showReadingTime: true,
+        feedOptions: {
+          type: ['rss', 'atom'],
+          title: 'Jackie X. - Life Log',
+        },
+      },
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: 'dark',
+      respectPrefersColorScheme: false,
+      disableSwitch: true,
     },
     navbar: {
       title: 'Jackie X.',
@@ -82,7 +101,12 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        { to: '/blog', label: 'Blog', position: 'left' },
+        { to: '/devlog', label: 'Dev Log', position: 'left' },
+        { to: '/lifelog', label: 'Life Log', position: 'left' },
+        {
+          type: 'custom-NavbarCatppuccinThemeSwitcher',
+          position: 'right',
+        },
         {
           href: 'https://github.com/nyjackie',
           label: 'GitHub',
@@ -137,7 +161,7 @@ const config: Config = {
     },
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      darkTheme: prismThemes.vsDark, // Better match for Catppuccin Mocha
     },
   } satisfies Preset.ThemeConfig,
 };
