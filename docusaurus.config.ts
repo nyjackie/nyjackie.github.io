@@ -147,8 +147,8 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Dev Log',
+              to: '/devlog',
             },
             {
               label: 'GitHub',
