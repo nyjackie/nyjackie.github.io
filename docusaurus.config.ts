@@ -2,34 +2,27 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 const config: Config = {
-  title: "Jackie X.",
-  tagline: 'Dinosaurs are cool',
+  title: 'Jackie Xu',
+  tagline: 'Software engineer in New York',
   favicon: 'img/favicon.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
   url: 'https://nyjackie.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'nyjackie', // Usually your GitHub org/user name.
-  projectName: 'blog', // Usually your repo name.
+  organizationName: 'nyjackie',
+  projectName: 'blog',
 
   onBrokenLinks: 'throw',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  stylesheets: [
+    'https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Geist:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap',
+  ],
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -45,7 +38,7 @@ const config: Config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: false, // Disable default blog
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -65,7 +58,7 @@ const config: Config = {
         showReadingTime: true,
         feedOptions: {
           type: ['rss', 'atom'],
-          title: 'Jackie X. - Dev Log',
+          title: 'Jackie Xu - Dev Log',
         },
       },
     ],
@@ -80,88 +73,47 @@ const config: Config = {
         showReadingTime: true,
         feedOptions: {
           type: ['rss', 'atom'],
-          title: 'Jackie X. - Life Log',
+          title: 'Jackie Xu - Life Log',
         },
       },
     ],
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
-      defaultMode: 'dark',
+      defaultMode: 'light',
       respectPrefersColorScheme: false,
       disableSwitch: true,
     },
     navbar: {
-      title: 'Jackie X.',
+      title: 'Jackie Xu',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Jackie Xu',
+        src: 'https://github.com/nyjackie.png',
       },
       items: [
-        { to: '/devlog', label: 'Dev Log', position: 'left' },
-        { to: '/lifelog', label: 'Life Log', position: 'left' },
-        {
-          type: 'custom-NavbarCatppuccinThemeSwitcher',
-          position: 'right',
-        },
-        {
-          href: 'https://github.com/nyjackie',
-          label: 'GitHub',
-          position: 'right',
-        },
+        { to: '/', label: 'Home', position: 'right', activeBaseRegex: '^/$' },
+        { to: '/about', label: 'About', position: 'right' },
+        { to: '/articles', label: 'Articles', position: 'right' },
       ],
     },
     footer: {
-      style: 'dark',
+      style: 'light',
       links: [
         {
-          title: 'Docs',
           items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Dev Log',
-              to: '/devlog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
+            { label: 'github', href: 'https://github.com/nyjackie' },
+            { label: 'linkedin', href: 'https://www.linkedin.com/in/jackieexu/' },
+            { label: 'medium', href: 'https://medium.com/@jackiexu1228' },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} Jackie Xu · New York`,
     },
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.vsDark, // Better match for Catppuccin Mocha
+      darkTheme: prismThemes.vsDark,
     },
   } satisfies Preset.ThemeConfig,
 };

@@ -1,179 +1,197 @@
 /**
- * Official Catppuccin Theme Switcher ✨
- * All 4 flavors: Latte, Frappé, Macchiato, Mocha
- * Colors verified against https://catppuccin.com/palette/
+ * Warm Catppuccin Latte palette — ported from the claude-design mock.
  */
 
 :root {
   --ifm-code-font-size: 95%;
+  --ifm-font-family-base: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --ifm-heading-font-family: "Newsreader", "Source Serif Pro", Georgia, serif;
+  --ifm-font-family-monospace: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Warm Latte tokens (mock) */
+  --home-base: #f7f3eb;
+  --home-mantle: #efe9dd;
+  --home-surface0: #d8d0bc;
+  --home-text: #3d2f24;
+  --home-subtext1: #604c3c;
+  --home-subtext0: #7a6452;
+  --home-accent: #d96a1a;
+  --home-accent-ink: color-mix(in oklab, var(--home-accent) 80%, #2a1a10);
+  --home-accent-soft: color-mix(in oklab, var(--home-accent) 14%, var(--home-base));
+
+  --ifm-color-primary: #d96a1a;
+  --ifm-color-primary-dark: #c45e14;
+  --ifm-color-primary-darker: #b85811;
+  --ifm-color-primary-darkest: #94470c;
+  --ifm-color-primary-light: #de7833;
+  --ifm-color-primary-lighter: #e1813f;
+  --ifm-color-primary-lightest: #e89863;
+  --docusaurus-highlighted-code-line-bg: rgba(217, 106, 26, 0.1);
+
+  --ifm-background-color: var(--home-base);
+  --ifm-background-surface-color: var(--home-mantle);
+  --ifm-font-color-base: var(--home-text);
+  --ifm-heading-color: var(--home-text);
+  --ifm-link-color: var(--home-accent-ink);
+  --ifm-link-hover-color: var(--home-accent);
+  --ifm-menu-color-background-active: var(--home-accent-soft);
+  --ifm-navbar-background-color: color-mix(in oklab, var(--home-base) 88%, transparent);
+  --ifm-footer-background-color: var(--home-base);
+  --ifm-card-background-color: var(--home-mantle);
+  --ifm-toc-border-color: color-mix(in oklab, var(--home-text) 12%, transparent);
+  --ifm-color-emphasis-300: color-mix(in oklab, var(--home-text) 14%, transparent);
+  --ifm-hr-background-color: color-mix(in oklab, var(--home-text) 12%, transparent);
+  --ifm-code-background: var(--home-mantle);
+  --ifm-code-color: var(--home-accent-ink);
 }
 
-/* Catppuccin Latte (Light) */
-[data-catppuccin-theme='latte'] {
-  --ifm-color-primary: #8839ef;
-  --ifm-color-primary-dark: #7c2ee6;
-  --ifm-color-primary-darker: #7429e0;
-  --ifm-color-primary-darkest: #5f21ba;
-  --ifm-color-primary-light: #9445f2;
-  --ifm-color-primary-lighter: #9c4df4;
-  --ifm-color-primary-lightest: #b465f8;
-  --docusaurus-highlighted-code-line-bg: rgba(136, 57, 239, 0.1);
-  
-  --ifm-background-color: #eff1f5;
-  --ifm-background-surface-color: #e6e9ef;
-  --ifm-font-color-base: #4c4f69;
-  --ifm-heading-color: #dc8a78;
-  --ifm-menu-color-background-active: #e6e9ef;
-  --ifm-navbar-background-color: #dce0e8;
-  --ifm-footer-background-color: #dce0e8;
-  --ifm-card-background-color: #e6e9ef;
-  --ifm-toc-border-color: #9ca0b0;
-  --ifm-color-emphasis-300: #9ca0b0;
-  --ifm-hr-background-color: #9ca0b0;
-  --ifm-link-color: #8839ef;
-  --ifm-link-hover-color: #7c2ee6;
-  --ifm-code-background: #e6e9ef;
-  --ifm-code-color: #ea76cb;
+/* ---------- Navbar (mock-styled) ---------- */
+.navbar {
+  backdrop-filter: saturate(140%) blur(12px);
+  -webkit-backdrop-filter: saturate(140%) blur(12px);
+  border-bottom: 1px solid color-mix(in oklab, var(--home-text) 8%, transparent);
+  box-shadow: none;
+  height: auto;
+  padding: 4px 0;
+}
+.navbar__inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 10px 28px;
+}
+.navbar__brand {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  gap: 10px;
+  margin-right: 12px;
+}
+.navbar__title {
+  color: var(--home-text);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 500;
+}
+.navbar__logo {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid color-mix(in oklab, var(--home-text) 10%, transparent);
+}
+.navbar__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.navbar__item {
+  padding: 0;
+}
+.navbar__link {
+  font-family: var(--ifm-font-family-base);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--home-subtext1);
+  padding: 6px 12px;
+  border-radius: 999px;
+  transition: background 0.15s, color 0.15s;
+}
+.navbar__link:hover {
+  color: var(--home-text);
+  background: color-mix(in oklab, var(--home-text) 6%, transparent);
+  text-decoration: none;
+}
+.navbar__link--active {
+  color: var(--home-accent-ink);
+  background: var(--home-accent-soft);
+}
+.navbar__link--active:hover {
+  color: var(--home-accent-ink);
+  background: var(--home-accent-soft);
 }
 
-/* Catppuccin Frappé */
-[data-catppuccin-theme='frappe'] {
-  --ifm-color-primary: #ca9ee6;
-  --ifm-color-primary-dark: #be8ce0;
-  --ifm-color-primary-darker: #b883dd;
-  --ifm-color-primary-darkest: #9c6dd1;
-  --ifm-color-primary-light: #d6b0ec;
-  --ifm-color-primary-lighter: #dbb9ef;
-  --ifm-color-primary-lightest: #ecd4f5;
-  --docusaurus-highlighted-code-line-bg: rgba(202, 158, 230, 0.15);
-  
-  --ifm-background-color: #303446;
-  --ifm-background-surface-color: #414559;
-  --ifm-font-color-base: #c6d0f5;
-  --ifm-heading-color: #f2d5cf;
-  --ifm-menu-color-background-active: #414559;
-  --ifm-navbar-background-color: #232634;
-  --ifm-footer-background-color: #232634;
-  --ifm-card-background-color: #414559;
-  --ifm-toc-border-color: #626880;
-  --ifm-color-emphasis-300: #626880;
-  --ifm-hr-background-color: #626880;
-  --ifm-link-color: #ca9ee6;
-  --ifm-link-hover-color: #f4b8e4;
-  --ifm-code-background: #232634;
-  --ifm-code-color: #f4b8e4;
+/* ---------- Footer (mock-styled) ---------- */
+.footer {
+  background: var(--home-base);
+  border-top: 1px solid color-mix(in oklab, var(--home-text) 10%, transparent);
+  padding: 32px 0;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 12.5px;
+  color: var(--home-subtext0);
+  --ifm-footer-color: var(--home-subtext0);
+  --ifm-footer-link-color: var(--home-subtext1);
+  --ifm-footer-title-color: var(--home-subtext0);
+}
+.footer--dark {
+  background: var(--home-base);
+}
+.footer > .container,
+.footer > .container--fluid {
+  max-width: 980px;
+  padding: 0 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__links {
+  margin: 0;
+  order: 2;
+  flex: 0 0 auto;
+}
+.footer__col {
+  flex: 0 0 auto;
+  padding: 0;
+}
+.footer__title {
+  display: none;
+}
+.footer__items {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+.footer__item {
+  padding: 0;
+}
+.footer__link-item {
+  color: var(--home-subtext1);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 12.5px;
+  text-decoration: none;
+}
+.footer__link-item:hover {
+  color: var(--home-accent);
+  text-decoration: none;
+}
+.footer__bottom {
+  margin: 0;
+  order: 1;
+  flex: 0 0 auto;
+  text-align: left;
+}
+.footer__copyright {
+  text-align: left;
+  color: var(--home-subtext0);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 12.5px;
 }
 
-/* Catppuccin Macchiato */
-[data-catppuccin-theme='macchiato'] {
-  --ifm-color-primary: #c6a0f6;
-  --ifm-color-primary-dark: #b88df0;
-  --ifm-color-primary-darker: #b084ed;
-  --ifm-color-primary-darkest: #936de1;
-  --ifm-color-primary-light: #d4b3fc;
-  --ifm-color-primary-lighter: #d9bcfd;
-  --ifm-color-primary-lightest: #e8d4fe;
-  --docusaurus-highlighted-code-line-bg: rgba(198, 160, 246, 0.15);
-  
-  --ifm-background-color: #24273a;
-  --ifm-background-surface-color: #363a4f;
-  --ifm-font-color-base: #cad3f5;
-  --ifm-heading-color: #f4dbd6;
-  --ifm-menu-color-background-active: #363a4f;
-  --ifm-navbar-background-color: #181926;
-  --ifm-footer-background-color: #181926;
-  --ifm-card-background-color: #363a4f;
-  --ifm-toc-border-color: #5b6078;
-  --ifm-color-emphasis-300: #5b6078;
-  --ifm-hr-background-color: #5b6078;
-  --ifm-link-color: #c6a0f6;
-  --ifm-link-hover-color: #f5bde6;
-  --ifm-code-background: #181926;
-  --ifm-code-color: #f5bde6;
-}
-
-/* Catppuccin Mocha */
-[data-catppuccin-theme='mocha'] {
-  --ifm-color-primary: #cba6f7;
-  --ifm-color-primary-dark: #b794f5;
-  --ifm-color-primary-darker: #ab88f4;
-  --ifm-color-primary-darkest: #8b5cf6;
-  --ifm-color-primary-light: #d3b2f9;
-  --ifm-color-primary-lighter: #dfbefa;
-  --ifm-color-primary-lightest: #f5e0fe;
-  --docusaurus-highlighted-code-line-bg: rgba(203, 166, 247, 0.15);
-  
-  --ifm-background-color: #1e1e2e;
-  --ifm-background-surface-color: #313244;
-  --ifm-font-color-base: #cdd6f4;
-  --ifm-heading-color: #f5e0dc;
-  --ifm-menu-color-background-active: #313244;
-  --ifm-navbar-background-color: #11111b;
-  --ifm-footer-background-color: #11111b;
-  --ifm-card-background-color: #313244;
-  --ifm-toc-border-color: #45475a;
-  --ifm-color-emphasis-300: #45475a;
-  --ifm-hr-background-color: #45475a;
-  --ifm-link-color: #cba6f7;
-  --ifm-link-hover-color: #f5c2e7;
-  --ifm-code-background: #11111b;
-  --ifm-code-color: #f5c2e7;
-}
-
-/* Smooth transitions for theme switching */
+/* ---------- Misc Docusaurus polish ---------- */
 * {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
-
-/* Navbar styling */
-.navbar {
-  box-shadow: 0 1px 2px 0 rgba(var(--ifm-color-primary-rgb), 0.1);
-}
-
-/* Card hover effects */
-.card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(var(--ifm-color-primary-rgb), 0.2);
-}
-
-/* Blog post styling */
 article header h1 {
-  color: var(--ifm-color-primary);
+  color: var(--ifm-heading-color);
+  font-family: var(--ifm-heading-font-family);
 }
 
-/* Scrollbar styling for dark themes */
-[data-catppuccin-theme='frappe'] ::-webkit-scrollbar,
-[data-catppuccin-theme='macchiato'] ::-webkit-scrollbar,
-[data-catppuccin-theme='mocha'] ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-[data-catppuccin-theme='frappe'] ::-webkit-scrollbar-track {
-  background: #303446;
-}
-
-[data-catppuccin-theme='macchiato'] ::-webkit-scrollbar-track {
-  background: #24273a;
-}
-
-[data-catppuccin-theme='mocha'] ::-webkit-scrollbar-track {
-  background: #1e1e2e;
-}
-
-[data-catppuccin-theme='frappe'] ::-webkit-scrollbar-thumb,
-[data-catppuccin-theme='macchiato'] ::-webkit-scrollbar-thumb,
-[data-catppuccin-theme='mocha'] ::-webkit-scrollbar-thumb {
-  background: var(--ifm-toc-border-color);
-  border-radius: 5px;
-}
-
-[data-catppuccin-theme='frappe'] ::-webkit-scrollbar-thumb:hover,
-[data-catppuccin-theme='macchiato'] ::-webkit-scrollbar-thumb:hover,
-[data-catppuccin-theme='mocha'] ::-webkit-scrollbar-thumb:hover {
-  background: var(--ifm-color-emphasis-300);
+/* Drop the auto-injected external-link arrow on chrome links (mock parity) */
+.navbar__link svg[class*="iconExternalLink"],
+.footer__link-item svg[class*="iconExternalLink"] {
+  display: none;
 }
