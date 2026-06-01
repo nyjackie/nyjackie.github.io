@@ -96,6 +96,7 @@ const config: Config = {
         { to: '/', label: 'Home', position: 'right', activeBaseRegex: '^/$' },
         { to: '/about', label: 'About', position: 'right' },
         { to: '/articles', label: 'Articles', position: 'right' },
+        { to: '/projects/hantavirus-tracker', label: 'Projects', position: 'right' },
       ],
     },
     footer: {

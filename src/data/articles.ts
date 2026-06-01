@@ -16,7 +16,7 @@ export const ARTICLES: Article[] = [
   },
   {
     href: '/devlog/waifu-believes-in-you-theory',
-    title: 'Does the "Waifu Believes in You" Theory Apply to Programmers?',
+    title: 'Correlation between anime profile pictures and engineering skill',
     date: 'Feb 1, 2025',
     category: 'devlog',
   },

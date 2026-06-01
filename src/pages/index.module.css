@@ -242,6 +242,10 @@ a.row:hover .rowTitle { color: var(--home-accent-ink); }
   padding-top: 24px;
   border-top: 1px solid color-mix(in oklab, var(--home-text) 10%, transparent);
 }
+.job:first-child {
+  border-top: none;
+  padding-top: 0;
+}
 .jobNoBorder {
   border-top: none;
   padding-top: 0;

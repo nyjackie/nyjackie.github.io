@@ -91,6 +91,21 @@ export default function Home(): ReactNode {
 
           <section className={styles.section}>
             <div className={styles.sectionHead}>
+              <h2>Projects</h2>
+            </div>
+            <div className={styles.rowList}>
+              <Link to="/projects/hantavirus-tracker" className={styles.row}>
+                <span className={styles.rowDate}>2026</span>
+                <span className={styles.rowTitle}>Hantavirus Tracker</span>
+                <span className={styles.rowTag} data-cat="devlog">
+                  data viz
+                </span>
+              </Link>
+            </div>
+          </section>
+
+          <section className={styles.section}>
+            <div className={styles.sectionHead}>
               <h2>Currently</h2>
             </div>
             <div className={styles.rowList}>

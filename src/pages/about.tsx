@@ -111,18 +111,11 @@ export default function About(): ReactNode {
           <section className={`${styles.section} ${styles.sectionTight}`}>
             <div className={styles.bio}>
               <p>
-                Right now I'm at <strong>Amazon</strong>, on the Creative AI Studio team, building the
-                chat interface for our generative AI tools. Before that I was at <strong>Intuit</strong>{' '}
-                working on QuickBooks micro-frontends, and before that <strong>Policygenius</strong>,
-                where I got to watch one app go from zero users to a million and learn what breaks at
-                each step along the way.
-              </p>
-              <p>
-                The work I get most excited about sits between <strong>complicated systems</strong> and{' '}
-                <strong>calm, understandable interfaces</strong>. AI tooling is great for that right now
-                — the model underneath is weird and powerful, and the UI's whole job is to make it feel
-                like something you can actually drive. I also care a lot about performance, accessibility,
-                and design systems that respect the people who have to use them every day.
+                Right now I'm at Amazon, building the chat interface for generative AI
+                creative tools — I like making complicated things feel simple to use. Before that I
+                was at Intuit and Policygenius, where I learned what breaks
+                when an app scales from zero to a million users. I care a lot about performance,
+                accessibility, and design systems that respect the people who use them every day.
               </p>
               <p>
                 Outside of work I'm slowly working through a stack of essay collections, learning to cook
