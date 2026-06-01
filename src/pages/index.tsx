@@ -101,6 +101,13 @@ export default function Home(): ReactNode {
                   data viz
                 </span>
               </Link>
+              <Link to="/projects/robotics-telemetry" className={styles.row}>
+                <span className={styles.rowDate}>2026</span>
+                <span className={styles.rowTitle}>Robotics Telemetry Dashboard</span>
+                <span className={styles.rowTag} data-cat="devlog">
+                  data viz
+                </span>
+              </Link>
             </div>
           </section>
 

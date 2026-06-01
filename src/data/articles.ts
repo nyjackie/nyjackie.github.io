@@ -9,6 +9,12 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    href: '/devlog/robotics-telemetry-dashboard',
+    title: 'Building a real-time robotics telemetry dashboard in the browser',
+    date: 'Jun 1, 2026',
+    category: 'devlog',
+  },
+  {
     href: '/devlog/building-multi-agent-ai-systems',
     title: 'How I Built a Multi-Agent AI System (And Why You Should Too)',
     date: 'Feb 1, 2026',

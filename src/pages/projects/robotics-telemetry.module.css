@@ -1,0 +1,231 @@
+.page {
+  --home-base: #f7f3eb;
+  --home-mantle: #efe9dd;
+  --home-surface0: #d8d0bc;
+  --home-text: #3d2f24;
+  --home-subtext1: #604c3c;
+  --home-subtext0: #7a6452;
+  --home-peach: #d96a1a;
+  --home-teal: #207d7d;
+  --home-mauve: #8a4ac9;
+  --home-sapphire: #1e7da0;
+  --home-green: #2d8659;
+  --home-red: #c44040;
+  --home-yellow: #b8860b;
+  --home-accent: var(--home-teal);
+  --home-accent-soft: color-mix(in oklab, var(--home-accent) 14%, var(--home-base));
+  --home-accent-ink: color-mix(in oklab, var(--home-accent) 80%, #2a1a10);
+  --home-font-serif: "Newsreader", "Source Serif Pro", Georgia, serif;
+  --home-font-sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --home-font-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
+
+  background: var(--home-base);
+  color: var(--home-text);
+  font-family: var(--home-font-sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 64px 28px 96px;
+}
+
+.header {
+  margin-bottom: 48px;
+}
+
+.header h1 {
+  font-family: var(--home-font-serif);
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  font-size: 38px;
+  margin: 0 0 12px;
+  color: var(--home-text);
+}
+
+.subtitle {
+  color: var(--home-subtext1);
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 60ch;
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: var(--home-font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid color-mix(in oklab, var(--home-text) 15%, transparent);
+  background: var(--home-mantle);
+  color: var(--home-text);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn:hover {
+  background: var(--home-surface0);
+  border-color: color-mix(in oklab, var(--home-text) 25%, transparent);
+}
+
+.btnActive {
+  background: var(--home-teal);
+  color: #fff;
+  border-color: var(--home-teal);
+}
+
+.btnActive:hover {
+  background: color-mix(in oklab, var(--home-teal) 85%, #000);
+}
+
+.btnDanger {
+  background: color-mix(in oklab, var(--home-red) 12%, var(--home-mantle));
+  border-color: color-mix(in oklab, var(--home-red) 30%, transparent);
+  color: var(--home-red);
+}
+
+.btnDanger:hover {
+  background: color-mix(in oklab, var(--home-red) 20%, var(--home-mantle));
+}
+
+.speedGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.speedLabel {
+  font-family: var(--home-font-mono);
+  font-size: 12px;
+  color: var(--home-subtext0);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.speedBtn {
+  font-family: var(--home-font-mono);
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid color-mix(in oklab, var(--home-text) 12%, transparent);
+  background: var(--home-mantle);
+  color: var(--home-subtext1);
+  cursor: pointer;
+}
+
+.speedBtnActive {
+  background: var(--home-accent);
+  color: #fff;
+  border-color: var(--home-accent);
+}
+
+.statRow {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  background: var(--home-mantle);
+  border: 1px solid color-mix(in oklab, var(--home-text) 8%, transparent);
+  border-radius: 10px;
+  padding: 16px 20px;
+  flex: 1;
+  min-width: 120px;
+}
+
+.statValue {
+  font-family: var(--home-font-mono);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--home-text);
+  margin: 0;
+}
+
+.statLabel {
+  font-family: var(--home-font-mono);
+  font-size: 11px;
+  color: var(--home-subtext0);
+  margin: 4px 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.statAlert {
+  color: var(--home-red);
+}
+
+.statOk {
+  color: var(--home-green);
+}
+
+.chartGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.chartCard {
+  background: var(--home-mantle);
+  border: 1px solid color-mix(in oklab, var(--home-text) 8%, transparent);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.chartCard h3 {
+  font-family: var(--home-font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--home-subtext1);
+  margin: 0 0 16px;
+}
+
+.chartFull {
+  grid-column: 1 / -1;
+}
+
+.viewportCard {
+  margin-bottom: 28px;
+}
+
+.viewport {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f7f3eb 0%, #ede5d6 100%);
+}
+
+.viewportLoading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+  font-family: var(--home-font-mono);
+  font-size: 13px;
+  color: var(--home-subtext0);
+}
+
+@media (max-width: 720px) {
+  .main { padding: 40px 22px 64px; }
+  .header h1 { font-size: 30px; }
+  .chartGrid { grid-template-columns: 1fr; }
+  .statRow { flex-direction: column; }
+  .controls { gap: 8px; }
+  .speedGroup { margin-left: 0; }
+}
